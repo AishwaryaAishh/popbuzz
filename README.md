@@ -1,2 +1,2 @@
 # popbuzz
-music website more like spotify
+music website
