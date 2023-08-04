@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>POPBuzz</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+<style>
+body{
+margin:0;
+font-familybody:"Times New Roman", Georgia, Serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display",
+  float:left;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.media{
+overflow: hidden;
+}
+.media a{
+display:block;
+background-color:#adefd1;
+font-size:36px;
+padding:16px;
+}
+.fa:hover{
+opacity:0.7;
+}
+
+.result{
+		display:inline-block;
+		padding:10px;
+		border-style:outset;
+		}
+.imagage{
+	  height: 228.5px;
+	  width: 80%;
+	  border-radius: 25px;
+	  box-shadow: 1px 0px 20px 12px rgba(255,255,255,0.2);
+        } 
+#main{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: left;
+	justify-content: left;
+}		
+</style>
+</head>
+<body>
+<div class="bg-img">
+<div class="container">
+<div class="navBar" style="letter-spacing:4px;">
+<a class="home" href="#home">POpBuzz</a>
+<div class="navBar-right">
+<a href="about.html" >About</a>
+<a href="playlist.html">PLAYList</a>
+<a href="LOGIN.html">LOGIN</a>
+</div>
+</div>
+</div>
+</div>
+<div id="main" >
+		<div id="container"></div>
+		<script type="text/babel">
+			class ResImg extends React.Component{
+				render(){
+					return(
+						<img  className={this.props.type}  src={this.props.src}></img>
+						
+					);
+				}
+			}
+			class ResCaption extends React.Component{
+				render(){
+					return(
+						<p>{this.props.caption}</p>
+					)
+				}
+			}
+			class ResLink extends React.Component{
+				render(){
+					return(
+						<a  className="clr" href={this.props.href}>{this.props.linktext}</a>
+					)
+				}
+			}
+			class SrchRslt extends React.Component{
+				render(){
+					return(
+						<div className="result">
+						 
+							<ResImg {...this.props}/>
+							<ResCaption {...this.props}/>
+							<ResLink {...this.props}/>
+						</div>
+					)
+				}
+			}
+			ReactDOM.render(
+				<div>
+					<SrchRslt type="imagage" src="img/justin.jpg" href="justin.html" linktext="JUSTIN BIEBER  "  caption="JUSTIN BIEBER   "/>
+					<SrchRslt type="imagage" src="img/taylor.jpg" href="taylor.html" linktext="TAYLOR SWIFT   "  caption="TAYLOR SWIFT   "/>
+					<SrchRslt type="imagage" src="img/shawn.jpg" href="shawn.html" linktext="SHAWN MENDES   "  caption="SHAWN MENDES   "/>
+					<SrchRslt type="imagage" src="img/camila.jpg" href="camila.html" linktext="CAMILA CABELLO   "  caption="CAMILA CABELLO  "/>
+					<SrchRslt type="imagage" src="img/selena.jpg" href="selena.html" linktext="SELENA GOMEZ   "  caption="SELENA GOMEZ  "/>
+				</div>,
+				document.querySelector("#container")
+			);
+		</script>
+		</div>
+		</div>
+<div class="media">
+<br>
+<br>
+<br>
+<a href="#" class="fa fa-facebook"></a><br>
+<a href="#" class="fa fa-twitter"></a><br>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+</body>
+</html>

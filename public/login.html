@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+margin:0;
+font-familybody:"Times New Roman", Georgia, Serif;
+background-image:url("bg2.png");
+background-repeat:repeat;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color:#adefd1 ;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.logo {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+.login{
+	padding:13px;
+	background-color:#adefd1;
+	border-radius:99px;
+	color:white;
+	font-weight:800;
+}
+.reset{
+	padding:13px;
+	background-color:#adefd1;
+	border-radius:99px;
+	font-weight:800;
+	float:right;
+	color:white;
+}
+</style>
+</head>
+<body>
+<div id="id01">
+<div class="container">
+<div class="imgcontainer">
+      <img src="logo.png" alt="logo" class="logo">
+	  <h3>PopBuzz</h3>
+	  <h2>Sign up for free to start listening</h2>
+	  <hr>
+    </div>
+     
+    <div class="container">
+	 <form action="/register" method="post">
+      <label for="email"><b>Enter your Email:</b></label>
+      <input type="text" placeholder="Enter your email" name="email" required>
+
+      <label for="psw"><b>Create a Password:</b></label>
+      <input type="password" placeholder="Create a Password" name="psw" required>
+	  
+      <label for="name"><b>What should we call you?</b></label>
+      <input type="text" placeholder="your name" name="name" required>
+	  
+      <label for="gender"><b>Gender:</b></label>
+	  <label for="gender"><b>Male</b></label>
+	  <input type="radio" placeholder="male" name="gender">
+	  <label for="gender"><b>female</b></label>
+	  <input type="radio" placeholder="female" name="gender">
+	  <label for="gender"><b>Other</b></label>
+	  <input type="radio" placeholder="Other" name="gender"><br><br>
+	  <input type="submit" value="LOGIN" class="login" OnClick="btnClicked()"/>
+	  <input type="reset" value="RESET" class="reset"/>
+	  <script>
+	  function btnClicked(){
+	  alert("login in successfully");
+	  document.location.href="index.html";
+	  }
+	  </script>
+	  
+      </label>
+	  </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
